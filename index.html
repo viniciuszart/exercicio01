@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Card Design Using HTML and CSS - Coding Power</title>
+</head>
+<body>
+    <nav>
+        <Ul id="Menu-horizontal">
+         <li><a href="#Home">Home</a></li>
+         <li><a href="#Sobre nos">Sobre nos</a></li>
+         <li><a href="Contato">Contato</a></li>
+         <li><a href="Sac">Sac</a></li>
+        </Ul>
+        </nav>
+
+   <div class="container">
+       <div class="product">
+           <div class="image">
+               <img class="product-image" src="images/orange.png" alt="">
+           </div>
+           <div class="color">
+               <span class="blue" data-image="images/orange.png" data-color="#3acab2"></span>
+               <span class="green" data-image="images/green.png" data-color="#64d82e"></span>
+               <span class="yellow" data-image="images/black.png" data-color="#d0dd58"></span>
+               <span class="pink" data-image="images/red.png" data-color="#b93c89"></span>
+           </div>
+           <div class="title">
+               Voce correndo em sua melhor versão!
+           </div>
+           <div class="detail">
+               <p>OFERTA: <span>R$ 499,99</span></p>
+               <a href="#">COMPRAR</a>
+           </div>
+       </div>
+   </div>
+   
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script>
+       $(".color span").click(function(){
+
+        $(".color span").removeClass("active");
+        $(this).addClass("active");
+        $(".detail span").css("color",$(this).attr("data-color"));
+        $(".detail a").css("background",$(this).attr("data-color"));
+        $(".product-image").attr("src",$(this).attr("data-image"));
+        $("body").css("background",$(this).attr("data-color"));
+       });
+   </script>
+
+</body>
+</html>
