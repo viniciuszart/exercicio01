@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #982fde;
+}
+
+.container{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container .product{
+    background: #aca0b1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container .product .image{
+    width: 300px;
+    height: 150px;
+    margin: auto;
+}
+
+.container .product .image .product-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.8s linear;
+}
+
+.container .product .color{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    margin: 15px;
+}
+
+.container .product .color span{
+    width: 15px;
+    height: 15px;
+    margin: 0 15px;
+    border-radius: 50%;
+    background: #87d62d;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .product .color .green{
+    background: #64d82e;
+}
+
+.container .product .color .yellow{
+    background: #d0dd58;
+}
+
+.container .product .color .pink{
+    background: #b93c89;
+}
+
+.container .product .color .blue{
+    background: #3acab2;
+}
+
+.container .product .color .active::after{
+    content: "";
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid rgb(48, 179, 59);
+    position: absolute;
+    left: -3px;
+    top: -3px;
+}
+
+.container .product .title{
+    font-size: 22px;
+    text-align: center;
+}
+
+.container .product .detail{
+    text-align: center;
+}
+
+.container .product .detail p{
+    margin: 15px;
+    font-size: 25px;
+}
+
+.container .product .detail p span{
+    color: #6b5fa1;
+}
+
+.container .product .detail a{
+    text-decoration: none;
+    background: #DE522F;
+    padding: 8px 45px;
+    border-radius: 8px;
+    color: white;
+    margin: 15px;
+}
+
+nav {
+    background-color: #aca0b1;
+    overflow: hidden;
+
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+nav li {
+display: inline-block;
+margin-right: 20px;
+}
+nav a {
+    display: block ;
+    color: rgb(red, green, blue) ;
+    text-align: center ;
+    padding: 14px 16px ;
+    text-decoration: none;
+}
+nav a:hover {
+background-color: aliceblue;
+color: black;
+}
